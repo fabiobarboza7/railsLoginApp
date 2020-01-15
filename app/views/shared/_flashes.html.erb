@@ -1,0 +1,14 @@
+<div class="errors">
+	<% if flash[:login_errors] %>
+		<% flash[:login_errors].each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>
+<div class="success">
+	<% if flash[:login_success] %>
+		<% flash[:login_success].each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>

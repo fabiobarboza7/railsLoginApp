@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Dashboard</h1>
+	<p><%= current_user.username %></p>
+	<p><%= session[:user_id] %></p>
+	<p>
+		
+	<%= link_to "Log out", logout_path, method: "delete" %>
+	</p>
+</body>
+</html>
