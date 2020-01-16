@@ -5,12 +5,19 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Dashboard</h1>
-	<p><%= current_user.username %></p>
-	<p><%= session[:user_id] %></p>
-	<p>
-		
-	<%= link_to "Log out", logout_path, method: "delete" %>
-	</p>
+	<section class="dashboard-section">
+		<header>
+			<h1>Dashboard</h1>
+		</header>
+		<article>
+			<p>User: <%= current_user.username %></p>
+			<p>Session id: <%= session[:user_id] %></p>
+			<%= link_to logout_path, method: :delete do %>
+			<div>
+				Logout
+			</div>
+			<% end %>
+		</article>
+	</section>
 </body>
 </html>

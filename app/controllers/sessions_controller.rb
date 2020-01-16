@@ -13,13 +13,14 @@ class SessionsController < ApplicationController
 				verify_user_fails(@user)
 			end	
 		else
-			flash[:login_errors] = ['User does not exists']
+			flash[:login_errors] = 'User does not exists'
 			redirect_to sign_in_path
 		end	
 	end
 
 	def destroy
-    session[:user_id] = nil         
+    session[:user_id] = nil  
+    flash[:logout_success] = 'You success sign out'      
     redirect_to sign_in_path
   end 
 

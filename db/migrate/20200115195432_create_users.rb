@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :username
       t.string :password
       t.string :status, default: 'active'
-      t.integer :fails, default: 3
+      t.integer :fails, default: 0
       t.timestamps
     end
   end

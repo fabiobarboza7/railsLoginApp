@@ -1,0 +1,27 @@
+.success {
+  right: 0;
+  width: 230px;
+  position: absolute;
+  bottom: 250px;
+  padding: 35px 0px;
+  background-color: lightgreen;
+  border-radius: 10px 0 0 10px;
+  white-space: nowrap;
+}
+
+.success p, .errors p {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+.errors {
+  right: 0;
+  width: 350px;
+  position: absolute;
+  bottom: 250px;
+  padding: 35px 0px;
+  background-color: #e67373;
+  border-radius: 10px 0 0 10px;
+  white-space: nowrap;
+}

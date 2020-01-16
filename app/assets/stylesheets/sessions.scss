@@ -1,3 +1,65 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.session-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 60px;
+	background-color: rgba(0,0,0, 0.3);
+	
+	h1 {
+		letter-spacing: 2px;
+	}
+
+	span {
+		color: #fff;
+	}
+
+	img {
+		width: 100px;
+		height: auto;
+	}
+}
+
+.session-section {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+form {
+	width: 30%;
+	padding: 20px;
+	border-radius: 5px;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	&{
+    animation: formAnimated 2s infinite 1s linear;
+	}
+
+	input {
+		padding: 10px 5px;
+		margin: 5px 0;
+		border-radius: 5px;
+		border-color: purple;
+		color: tomato;
+	}
+
+	input[type=submit] {
+		background: linear-gradient(45deg, orange, purple);
+		border-radius: 5px;
+		font-size: 26px;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+@keyframes formAnimated{
+	0%{ box-shadow: 0px 1px 20px 4px purple; }
+	50%{ box-shadow: 0px 1px 20px 2px grey; }
+	100% { box-shadow: 0px 1px 20px 4px purple; }
+}
+

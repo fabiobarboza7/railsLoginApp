@@ -1,14 +1,15 @@
-<div class="errors">
-	<% if flash[:login_errors] %>
-		<% flash[:login_errors].each do |error| %>
-			<p><%= error %></p>
-		<% end %>
-	<% end %>
-</div>
-<div class="success">
-	<% if flash[:login_success] %>
-		<% flash[:login_success].each do |error| %>
-			<p><%= error %></p>
-		<% end %>
-	<% end %>
-</div>
+<% if flash[:login_errors] %>
+	<div class="errors">
+		<p><%= flash[:login_errors] %></p>
+	</div>
+<% end %>
+<% if flash[:login_success] %>
+	<div class="success">
+		<p><%= flash[:login_success] %></p>
+	</div>
+<% end %>
+<% if flash[:logout_success] %>
+	<div class="success">
+		<p><%= flash[:logout_success] %></p>
+	</div>
+<% end %>
