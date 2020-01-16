@@ -1,24 +1,33 @@
-# README
+# Rails Simple Login App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description:
+Developing a RoR simple Login App for a awesome company as a test.
+All features, including css effects, notifications, and so on is pure code, without any special gem, as required.
 
-Things you may want to cover:
+## Starting
 
-* Ruby version
+### Requiriments
 
-* System dependencies
+- Rails
 
-* Configuration
+### Running
+```
+> bundle install
+> rails db:create && rails db:migrate && rails db:seed
+> yarn
+> rails server
 
-* Database creation
+> You can take a look in production server: https://simple-rails-login-app.herokuapp.com/
 
-* Database initialization
+> Users: username: "altice", password: "123456" or username: "fabio", password: "123456"
+```
+### Tests
 
-* How to run the test suite
+```
+> rspec
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Author
 
-* ...
+**Fábio Souza - fabiobarboza7@hotmail.com**
