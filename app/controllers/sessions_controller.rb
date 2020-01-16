@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
 	
 	def create
 		@user = User.find_by(username:login_params[:username])
-		verify_user_status(@user)
 
 		if !@user.nil?
+			verify_user_status(@user)
 			if @user.password === login_params[:password]
 				session[:user_id] = @user.id
 				restart_user_fails(@user)
