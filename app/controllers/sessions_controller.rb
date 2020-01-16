@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 	include SessionFailsConcern
 	
+	def index
+	end
+
 	def create
 		@user = User.find_by(username:login_params[:username])
 

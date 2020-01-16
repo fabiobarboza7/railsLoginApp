@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<section class="dashboard-section">
-		<header>
-			<h1>Dashboard</h1>
-		</header>
-		<article>
-			<p>User: <%= current_user.username %></p>
-			<p>Session id: <%= session[:user_id] %></p>
-			<%= link_to logout_path, method: :delete do %>
+<section class="dashboard-section">
+	<header>
+		<h1>Dashboard</h1>
+	</header>
+	<article>
+		<p>User: <%= current_user.username %></p>
+		<p>Session id: <%= session[:user_id] %></p>
+		<%= link_to logout_path, method: :delete do %>
 			<div>
 				Logout
 			</div>
-			<% end %>
-		</article>
-	</section>
-</body>
-</html>
+		<% end %>
+	</article>
+</section>

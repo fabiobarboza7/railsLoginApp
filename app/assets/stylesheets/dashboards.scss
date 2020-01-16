@@ -50,5 +50,9 @@
 	}
 }
 
-
-
+@media only screen and (max-width: 550px) {
+  .dashboard-section header, .dashboard-section article {
+    width: 100%;
+    border-radius: 0;
+  }
+}
