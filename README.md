@@ -16,9 +16,9 @@ All features, including css effects, notifications, and so on is pure code, with
 > rails db:create && rails db:migrate && rails db:seed
 > yarn
 > rails server
-
-> You can take a look in production server: https://simple-rails-login-app.herokuapp.com/
-
+```
+You can take a look in production server: https://simple-rails-login-app.herokuapp.com/
+```
 > Users: username: "altice", password: "123456" or username: "fabio", password: "123456"
 ```
 ### Tests
