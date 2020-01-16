@@ -1,14 +1,16 @@
 class SessionsController < ApplicationController
+	include SessionFailsConcern
+	
 	def create
 		@user = User.find_by(username:login_params[:username])
+		verify_user_status(@user)
+
 		if !@user.nil?
 			if @user.password === login_params[:password]
 				session[:user_id] = @user.id
-				flash[:login_success] = ["Welcome #{@user.username}"]
-				redirect_to dashboard_path
+				restart_user_fails(@user)
 			else
-				flash[:login_errors] = ['invalid credentials']
-				redirect_to sign_in_path
+				verify_user_fails(@user)
 			end	
 		else
 			flash[:login_errors] = ['User does not exists']
